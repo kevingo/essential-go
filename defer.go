@@ -10,5 +10,5 @@ func world() {
 
 func main() {
 	defer world()
-	hello()	
+	hello()
 }
