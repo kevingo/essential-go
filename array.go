@@ -29,4 +29,10 @@ func main() {
 
     c := [...]int{1,2,3}
     fmt.Println(c) // [1,2,3]
+
+    println("\nExample2\n")
+    arr2 := make([]int, 10)
+    for i, v := range arr2 {
+        fmt.Println("index: ", i, " value: ", v )
+    }
 }
