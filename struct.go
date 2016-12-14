@@ -6,7 +6,7 @@ import (
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
 func main() {
@@ -23,7 +23,13 @@ func main() {
 	show(p4)
 	change(&p4)
 	show(p4)
+	change2(p4)
+	show(p4)
 
+	p5 := new(person)
+	p5.name = "Kevin"
+	p5.goHome()
+	p5.goHome2()
 }
 
 func show(p person) {
@@ -32,4 +38,18 @@ func show(p person) {
 
 func change(p *person) {
 	p.name = p.name + "_new"
+}
+
+func change2(p person) {
+	p.name = p.name + "_new?"
+}
+
+// receiver
+func (p *person) goHome() {
+	p.name = "Mina"
+	fmt.Println(p.name + ", let's go home")
+}
+
+func (p person) goHome2() {
+	fmt.Println(p.name + ", let's go home2")
 }
